@@ -1,0 +1,14 @@
+---
+export interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<a
+  href="/"
+  class=`logo text-lg font-medium text-gray-400 hover:text-white transition-colors duration-300 pl-2 ${className ?? ''}`
+>
+  oussamaati.dev
+</a>

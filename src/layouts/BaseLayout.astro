@@ -1,0 +1,41 @@
+---
+import Header from '@components/Header.astro';
+import '@fontsource-variable/space-grotesk';
+import '@fontsource-variable/work-sans';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Favicon clásico -->
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <!-- PNG favicon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+    <!-- SVG favicon (moderno) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <!-- Manifest -->
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <!-- Web App Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/web-app-manifest-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon/web-app-manifest-512x512.png" />
+
+    <title>{title}</title>
+  </head>
+  <body class="py-4 lg:mx-0 max-w-screen bg-pattern">
+    <Header />
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,34 @@
+@import 'tailwindcss';
+
+/* Custom tailwind colors */
+@theme {
+  --color-bunker-50: #f7f7f8;
+  --color-bunker-100: #ededf1;
+  --color-bunker-200: #d8d9df;
+  --color-bunker-300: #b6b7c3;
+  --color-bunker-400: #8e90a2;
+  --color-bunker-500: #707287;
+  --color-bunker-600: #5a5b6f;
+  --color-bunker-700: #49495b;
+  --color-bunker-800: #3f404d;
+  --color-bunker-900: #383842;
+  --color-bunker-950: #151519;
+}
+
+/* Dotted background */
+.bg-pattern {
+  --dot-bg: #151519;
+  --dot-color: rgb(43, 43, 43);
+  --dot-size: 2px;
+  --dot-space: 16px;
+  background:
+    linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%)
+      center / var(--dot-space) var(--dot-space),
+    linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center /
+      var(--dot-space) var(--dot-space),
+    var(--dot-color);
+}
+
+.logo {
+  font-family: 'Space Grotesk Variable', sans-serif;
+}

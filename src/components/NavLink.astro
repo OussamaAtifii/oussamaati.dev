@@ -1,0 +1,18 @@
+---
+import type { NavLinkProps } from '@customTypes/nav-link-props';
+
+export interface Props {
+  link: NavLinkProps;
+}
+
+const { link } = Astro.props;
+---
+
+<li class="w-full">
+  <a
+    href={link.href}
+    class="w-full block text-sm rounded-md text-white transition-colors duration-300 bg-gray-800 hover:bg-gray-700 p-2 sm:bg-transparent sm:hover:bg-gray-800"
+  >
+    {link.label}
+  </a>
+</li>

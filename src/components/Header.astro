@@ -1,0 +1,110 @@
+---
+import type { NavLinkProps } from '@customTypes/nav-link-props';
+
+import GithubIcon from '@icons/GithubIcon.astro';
+import Mail from '@icons/Mail.astro';
+import IconLink from './IconLink.astro';
+import Logo from './Logo.astro';
+import MobileMenuToggle from './MobileMenuToggle.astro';
+import NavLink from './NavLink.astro';
+
+const navLinks: NavLinkProps[] = [
+  { href: '#about', label: 'About' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#certifications', label: 'Certifications' },
+];
+---
+
+<header
+  id="navbar"
+  class="w-[95%] lg:w-full sticky top-5 z-50 px-0 sm:max-w-[920px] mx-auto bg-bunker-950 sm:bg-bunker-950/90 border border-gray-700 backdrop-blur-3xl transition-all duration-300 rounded-md overflow-hidden"
+>
+  <nav class="flex flex-col sm:flex-row items-center mx-auto p-2" aria-label="Main navigation">
+    <!-- Mobile Header -->
+    <div class="flex justify-between items-center w-full sm:hidden">
+      <Logo />
+      <MobileMenuToggle />
+    </div>
+
+    <!-- Navigation Content -->
+    <div
+      id="nav-content"
+      class="hidden sm:flex flex-col sm:flex-row items-center justify-between w-full mt-4 sm:mt-0"
+    >
+      <Logo class="hidden sm:block" />
+
+      <ul class="flex flex-col sm:flex-row gap-2 items-center" role="list">
+        {navLinks.map((link) => <NavLink link={link} />)}
+      </ul>
+
+      <div class="flex items-center">
+        <IconLink href="mailto:oussamaati03@gmail.com" label="Email">
+          <Mail class="size-5" />
+        </IconLink>
+        <IconLink href="https://github.com/OussamaAtifii" label="GitHub">
+          <GithubIcon class="size-[18px]" />
+        </IconLink>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const menuButton = document.getElementById('menu-button');
+  const navContent = document.getElementById('nav-content');
+  const openMenuIcon = document.querySelector('.open-menu');
+  const closeMenuIcon = document.querySelector('.close-menu');
+
+  if (menuButton) {
+    menuButton.addEventListener('click', () => {
+      // Toggle the visibility of the navigation content
+      navContent?.classList.toggle('hidden');
+      document.body.classList.toggle('overflow-hidden');
+
+      // Toggle the visibility of the open and close icons
+      openMenuIcon?.classList.toggle('hidden');
+      closeMenuIcon?.classList.toggle('hidden');
+    });
+  }
+
+  const links = navContent?.querySelectorAll('a');
+  const header = document.querySelector('header');
+  let linkClicked = false;
+
+  // Close the menu when clicking on a link
+  if (links) {
+    links?.forEach((link) => {
+      link.addEventListener('click', () => {
+        linkClicked = true;
+        header?.classList.add('hidden');
+
+        setTimeout(() => {
+          navContent?.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+
+          if (menuButton) {
+            openMenuIcon?.classList.remove('hidden');
+            closeMenuIcon?.classList.add('hidden');
+          }
+        }, 100);
+      });
+    });
+  }
+
+  // Hide the header when a link is clicked
+  document.addEventListener('scroll', () => {
+    if (linkClicked) {
+      header?.classList.add('hidden');
+
+      setTimeout(() => {
+        linkClicked = false;
+      }, 1000);
+
+      return;
+    }
+
+    header?.classList.remove('hidden');
+  });
+</script>
