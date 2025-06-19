@@ -36,6 +36,10 @@ const { title } = Astro.props;
   </head>
   <body class="py-4 lg:mx-0 max-w-screen bg-pattern">
     <Header />
-    <slot />
+    <main
+      class="mx-auto max-w-4xl flex flex-col gap-20 sm:gap-24 min-h-screen relative py-4 [&>section]:px-4 sm:[&>section]:px-0 text-white"
+    >
+      <slot />
+    </main>
   </body>
 </html>
