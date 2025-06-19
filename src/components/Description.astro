@@ -1,0 +1,21 @@
+---
+import LinkedInIcon from '@icons/LinkedInIcon.astro';
+import Mail from '@icons/Mail.astro';
+import Button from './Button.astro';
+---
+
+<section class="flex flex-col gap-4 mt-8">
+  <div class="inline-flex gap-4 items-center flex-wrap">
+    <h1 class="text-4xl font-medium">Oussama Atifi</h1>
+  </div>
+
+  <p class="text-xl [&>strong]:font-medium [&>strong]:text-dodger-blue-600">
+    Over 1 year of experience as a full stack <strong>web developer</strong> in Almería, Spain 🇪🇸. Specialized
+    in process <strong>automation</strong> and creating <strong>functional and effective</strong> websites.
+  </p>
+
+  <div class="flex gap-4 items-center">
+    <Button href="mailto:oussamaati03@gmail.com" icon={Mail} text="Contáctame" />
+    <Button href="https://www.linkedin.com/in/oussama-atifi/" icon={LinkedInIcon} text="LinkedIn" />
+  </div>
+</section>
