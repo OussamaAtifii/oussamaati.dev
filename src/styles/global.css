@@ -13,13 +13,25 @@
   --color-bunker-800: #3f404d;
   --color-bunker-900: #383842;
   --color-bunker-950: #151519;
+
+  --color-dodger-blue-50: #edfaff;
+  --color-dodger-blue-100: #d7f1ff;
+  --color-dodger-blue-200: #b9e8ff;
+  --color-dodger-blue-300: #88dbff;
+  --color-dodger-blue-400: #50c5ff;
+  --color-dodger-blue-500: #28a7ff;
+  --color-dodger-blue-600: #118aff;
+  --color-dodger-blue-700: #0a71eb;
+  --color-dodger-blue-800: #0f5abe;
+  --color-dodger-blue-900: #134e95;
+  --color-dodger-blue-950: #11305a;
 }
 
 /* Dotted background */
 .bg-pattern {
   --dot-bg: #151519;
   --dot-color: rgb(43, 43, 43);
-  --dot-size: 2px;
+  --dot-size: 1px;
   --dot-space: 16px;
   background:
     linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%)
@@ -30,5 +42,17 @@
 }
 
 .logo {
+  font-family: 'Space Grotesk Variable', sans-serif;
+}
+
+html {
+  font-family: 'Work Sans Variable', sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+h1,
+h2,
+h3 {
   font-family: 'Space Grotesk Variable', sans-serif;
 }
