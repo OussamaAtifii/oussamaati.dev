@@ -1,0 +1,17 @@
+---
+import GitMergeIcon from '@icons/GitMergeIcon.astro';
+import { projects } from '@mocks/projects';
+import ProjectItem from './ProjectItem.astro';
+import Section from './Section.astro';
+---
+
+<Section
+  title="Projects"
+  id={'projects'}
+  icon={GitMergeIcon}
+  link="https://github.com/OussamaAtifii?tab=repositories"
+>
+  <div class="grid sm:grid-cols-1 gap-12">
+    {projects.map((project) => <ProjectItem project={project} />)}
+  </div>
+</Section>

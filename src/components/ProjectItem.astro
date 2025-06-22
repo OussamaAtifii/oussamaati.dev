@@ -1,0 +1,41 @@
+---
+import Button from '@components/Button.astro';
+import type { Project } from '@customTypes/project';
+import CodeIcon from '@icons/CodeIcon.astro';
+import LinkIcon from '@icons/LinkIcon.astro';
+import TagBadge from './TagBadge.astro';
+
+interface Props {
+  project: Project;
+}
+
+const { title, subtitle, image, tags, description, github, link } = Astro.props.project;
+---
+
+<article class="rounded-md flex flex-col justify-between gap-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div class="overflow-hidden rounded-md group">
+      <img
+        src={image}
+        alt={`${title} image`}
+        class="rounded-md group-hover:scale-105 transition"
+        loading="lazy"
+      />
+    </div>
+    <div class="flex flex-col justify-between gap-2 sm:gap-0">
+      <div class="flex flex-col gap-2">
+        <div class="flex gap-2">
+          <h2 class="text-2xl font-semibold">{title} - {subtitle}</h2>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          {tags.map((tag) => <TagBadge {...tag} />)}
+        </div>
+        <p class="text-gray-400">{description}</p>
+      </div>
+      <div class="flex gap-2">
+        <Button href={github} icon={CodeIcon} text="Code" />
+        <Button href={link} icon={LinkIcon} text="Preview" />
+      </div>
+    </div>
+  </div>
+</article>
