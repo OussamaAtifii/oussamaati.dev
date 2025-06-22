@@ -12,6 +12,7 @@
       "@customTypes/*": ["./src/types/*"],
       "@lib/*": ["./src/lib/*"],
       "@layouts/*": ["./src/layouts/*"],
+      "@data/*": ["./src/mocks/*"],
     }
   }
 }
