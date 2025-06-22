@@ -1,0 +1,28 @@
+---
+import CertificateIcon from '@icons/CertificateIcon.astro';
+import { certifications } from '@mocks/certifications';
+import Section from './Section.astro';
+---
+
+<Section id="certifications" title="Certifications" icon={CertificateIcon}>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {
+      certifications.map((cert) => (
+        <a
+          href={cert.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`View certificate: ${cert.name}`}
+          class="relative flex flex-col items-star p-5 border border-gray-700 rounded-lg bg-[#151519] shadow-lg transition-transform transform hover:-translate-y-1 hover:shadow-md duration-300"
+        >
+          <time class="absolute top-4 right-4 bg-gray-800 text-gray-400 text-xs px-2 py-1 rounded-md">
+            {cert.date}
+          </time>
+          <cert.tag.icon class="size-14 text-gray-300" />
+          <h3 class="mt-4 text-lg font-semibold text-white">{cert.name}</h3>
+          <p class="mt-2 text-sm text-gray-400">{cert.description}</p>
+        </a>
+      ))
+    }
+  </div>
+</Section>
