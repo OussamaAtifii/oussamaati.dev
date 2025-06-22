@@ -1,5 +1,14 @@
 ---
-const { icon: Icon, title, id } = Astro.props;
+import ArrowUpRightIcon from '@icons/ArrowUpRightIcon.astro';
+
+export interface Props {
+  title: string;
+  id: string;
+  icon: any;
+  link?: string;
+}
+
+const { icon: Icon, title, id, link } = Astro.props;
 ---
 
 <section id={id}>
@@ -8,6 +17,19 @@ const { icon: Icon, title, id } = Astro.props;
       {Icon && <Icon class="size-10" />}
       <h2 class="font-medium text-2xl">{title}</h2>
     </div>
+    {
+      link && (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm font-medium text-gray-400 hover:text-white flex items-center group transition duration-300 hover:cursor-pointer"
+        >
+          See more
+          <ArrowUpRightIcon class="size-4 group-hover:translate-x-[2px] transition duration-300" />
+        </a>
+      )
+    }
   </div>
   <slot />
 </section>
