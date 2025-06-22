@@ -1,0 +1,15 @@
+---
+import Building from '@icons/Building.astro';
+import { experience } from '@mocks/experience';
+import ExperienceItem from './ExperienceItem.astro';
+import Section from './Section.astro';
+---
+
+<Section title="Experience" id="experience" icon={Building}>
+  <ul
+    class="relative ml-1 border-s border-gray-700 space-y-10"
+    aria-label="Professional experience timeline"
+  >
+    {experience.map((item) => <ExperienceItem experience={item} />)}
+  </ul>
+</Section>
