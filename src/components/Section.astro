@@ -1,0 +1,13 @@
+---
+const { icon: Icon, title, id } = Astro.props;
+---
+
+<section id={id}>
+  <div class="flex justify-between items-center mb-8">
+    <div class="flex items-center gap-x-2">
+      {Icon && <Icon class="size-10" />}
+      <h2 class="font-medium text-2xl">{title}</h2>
+    </div>
+  </div>
+  <slot />
+</section>
