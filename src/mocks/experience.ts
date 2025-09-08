@@ -2,6 +2,16 @@ import type { Experience } from '@customTypes/experience';
 
 export const experience: Experience[] = [
   {
+    title: 'Frontend Developer',
+    company: 'NTT DATA',
+    companyLink: 'https://www.nttdata.com/global/en/',
+    date: 'September 2025 - Present',
+    description: [
+      'Add new functionality and enhance reusable components in Angular.',
+      'More updates coming soon...',
+    ],
+  },
+  {
     title: 'FullStack Developer',
     company: 'Magical Analytics',
     companyLink: 'https://magical.es/',
