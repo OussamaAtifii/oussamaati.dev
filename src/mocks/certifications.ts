@@ -2,6 +2,13 @@ import { tags } from './tags';
 
 export const certifications = [
   {
+    name: 'SOLID Principles and Clean Code',
+    link: 'https://www.udemy.com/certificate/UC-bcd9a068-5da5-4bc9-ab70-cbcb7e0f0cb8/',
+    date: 'December 2025',
+    description: 'SOLID, Clean Code, Refactoring, Best practices, Maintainable code',
+    tag: tags.UDEMY,
+  },
+  {
     name: 'Angular - The Complete Guide',
     link: 'https://www.udemy.com/course/the-complete-guide-to-angular-2',
     date: 'December 2024',
