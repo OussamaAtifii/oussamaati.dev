@@ -7,10 +7,15 @@ export const experience: Experience[] = [
     companyLink: 'https://www.nttdata.com/global/en/',
     date: 'September 2025 - Present',
     description: [
-      'Add new functionality and enhance reusable components in Angular.',
-      'More updates coming soon...',
+      'Developed complex business features and application logic, ensuring alignment with product requirements.',
+      'Used RxJS and reactive programming to manage asynchronous data flows, state handling, and component communication.',
+      'Integrated with REST APIs via Swagger / OpenAPI within a microservices-based architecture.',
+      'Implemented authentication and role-based access control to secure routes, views, and application functionality.',
+      'Applied clean code practices and strict TypeScript.',
+      'Worked closely with backend teams in an agile environment, contributing to API design discussions.',
     ],
   },
+
   {
     title: 'FullStack Developer',
     company: 'Magical Analytics',
