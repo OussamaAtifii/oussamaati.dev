@@ -3,19 +3,17 @@ import type { Experience } from '@customTypes/experience';
 export const experience: Experience[] = [
   {
     title: 'Frontend Developer',
-    company: 'NTT DATA',
+    company: 'NTT DATA Europe & Latam',
     companyLink: 'https://www.nttdata.com/global/en/',
     date: 'September 2025 - Present',
     description: [
-      'Developed complex business features and application logic, ensuring alignment with product requirements.',
-      'Used RxJS and reactive programming to manage asynchronous data flows, state handling, and component communication.',
-      'Integrated with REST APIs via Swagger / OpenAPI within a microservices-based architecture.',
-      'Implemented authentication and role-based access control to secure routes, views, and application functionality.',
-      'Applied clean code practices and strict TypeScript.',
-      'Worked closely with backend teams in an agile environment, contributing to API design discussions.',
+      'Developed modules and new features using Angular 14 for public-sector hydraulic management applications.',
+      'Collaborated in the design and implementation of new functionalities and technical solutions.',
+      'Implemented business logic and integrated REST APIs using RxJS and Observables.',
+      'Built reusable user interfaces and components with Angular Material and SCSS.',
+      'Applied clean code principles and TypeScript best practices.',
     ],
   },
-
   {
     title: 'FullStack Developer',
     company: 'Magical Analytics',
