@@ -3,6 +3,16 @@ import { tags } from './tags';
 
 export const projects: Project[] = [
   {
+    title: 'Crypto Pulse',
+    subtitle: 'Crypto Tracker',
+    description:
+      'Cryptocurrency tracking app with real-time market data, coin statistics, price charts, and detailed market information powered by the CoinGecko API.',
+    link: 'https://cryptopulse.oussamaati.dev',
+    github: 'https://github.com/OussamaAtifii/cryptopulse',
+    image: 'projects/cryptopulse.webp',
+    tags: [tags.ANGULAR, tags.TAILWIND, tags.DOCKER, tags.NGINX],
+  },
+  {
     title: 'Prodly',
     subtitle: 'Project Manager',
     description:

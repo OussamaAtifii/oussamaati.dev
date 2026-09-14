@@ -1,6 +1,8 @@
 import AngularIcon from '@icons/AngularIcon.astro';
+import DockerIcon from '@icons/DockerIcon.astro';
 import ExpressIcon from '@icons/ExpressIcon.astro';
 import LanguageCertIcon from '@icons/LanguageCertIcon.astro';
+import NginxIcon from '@icons/NginxIcon.astro';
 import NgrxIcon from '@icons/NgrxIcon.astro';
 import NodeJSIcon from '@icons/NodeJSIcon.astro';
 import TailwindIcon from '@icons/TailwindIcon.astro';
@@ -45,4 +47,12 @@ export const tags = {
     name: 'WebSocket',
     icon: WebSocketIcon,
   },
+  DOCKER: {
+    name: 'Docker',
+    icon: DockerIcon
+  },
+  NGINX: {
+    name: 'Nginx',
+    icon: NginxIcon
+  }
 };
